@@ -1,0 +1,418 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&family=Comfortaa:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none !important;
+}
+
+button {
+  padding: 0;
+}
+
+/* p {
+  margin: 0 !important;
+} */
+.title {
+  font-family: Baloo Thambi 2;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.black {
+  color: #333333;
+}
+
+.logo p {
+  font-family: Baloo Thambi 2;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #333333;
+}
+
+.btn-primary {
+  background-color: #333333;
+  color: #fff;
+  padding: 12px 48px;
+  border-radius: 10px;
+  border: 0;
+  display: bolck;
+}
+
+.btn-primary:hover {
+  background-color: #1e1e1e;
+}
+
+.btn-primary:active {
+  border: #fff 2px solid;
+}
+
+.btn-standby {
+  background-color: #ffd370;
+  /* opacity: 0.1; */
+  padding: 12px 48px;
+  border-radius: 10px;
+  border: 0;
+  color: #333333;
+}
+
+.btn-standby:hover {
+  background-color: #ffc94b;
+}
+
+.btn-standby:active {
+  border: #fff 2px solid;
+}
+
+.input-normal input {
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  width: 100%;
+}
+.input-normal p {
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.warning {
+  content: "此欄位不可為空";
+  color: #d87355;
+  display: block;
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.add-task-box {
+  width: 100%;
+  position: relative;
+}
+.add-task-box input {
+  width: 100%;
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+.add-task-box .add-task {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  background-color: #333333;
+  border: 0;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+/* .list-item {
+  lebel {
+    input[type="checkbox"] {
+      display: none;
+    }
+    .check {
+      width: 20px;
+      height: 20px;
+      background: url(../images/checkbox.svg);
+    }
+  }
+
+  .check[type="checkbox"] + span {
+    display: inline-block;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    line-height: 20px;
+    background: url(../images/checkbox.svg);
+    user-select: none;
+  }
+  input[type="checkbox"]:checked {
+    background: url(../images/check.svg) no-repeat left top;
+  }
+} */
+.filter-btn {
+  border: 0;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 15px 0;
+  width: 166px;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.filter-btn:hover {
+  border-bottom: #333333 2px solid;
+}
+
+.list-item {
+  /* input[type="checkbox"]:checked ~ .check {
+    background: url(../images/check.svg) no-repeat;
+  } */
+}
+.list-item label {
+  width: 100%;
+  /* .check {
+    display: inline-block;
+    width: 25px;
+    height: 20px;
+    background: url(../images/checkbox.svg) no-repeat;
+  } */
+}
+.list-item label input[type=checkbox] {
+  display: none;
+}
+.list-item .task-content {
+  width: 100%;
+}
+
+.delete {
+  background-color: #fff;
+  border: 0;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.active {
+  border-bottom: #333333 2px solid;
+}
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #ffd370;
+}
+
+.slogan {
+  font-family: Noto Sans TC;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: start;
+}
+
+.todo-list {
+  height: 100vh;
+  background-image: url("../images/bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: #fff !important;
+  background-repeat: no-repeat;
+}
+
+main {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.empty p {
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 60px 0 40px 0;
+}
+.empty img {
+  width: 240px;
+}
+
+.wrap-task {
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 10px;
+}
+
+.list-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.nickName {
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.logOut {
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #333333;
+}
+
+/* @import "./vendors/*"; *//*# sourceMappingURL=all.css.map */

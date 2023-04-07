@@ -1,0 +1,162 @@
+.logo {
+  p {
+    font-family: Baloo Thambi 2;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $secondary;
+  }
+}
+
+.btn-primary {
+  background-color: $secondary;
+  color: #fff;
+  padding: 12px 48px;
+  border-radius: 10px;
+  border: 0;
+  display: bolck;
+}
+
+.btn-primary:hover {
+  background-color: #1e1e1e;
+}
+.btn-primary:active {
+  border: #fff 2px solid;
+}
+.btn-standby {
+  background-color: $primary;
+  /* opacity: 0.1; */
+  padding: 12px 48px;
+  border-radius: 10px;
+  border: 0;
+  color: $secondary;
+}
+.btn-standby:hover {
+  background-color: #ffc94b;
+}
+.btn-standby:active {
+  border: #fff 2px solid;
+}
+.input-normal {
+  input {
+    border: 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  p {
+    font-family: Noto Sans TC;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+.warning {
+  content: "此欄位不可為空";
+  color: $warning;
+  display: block;
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.add-task-box {
+  width: 100%;
+  position: relative;
+  input {
+    width: 100%;
+    border: 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+  .add-task {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background-color: $secondary;
+    border: 0;
+    padding: 8px;
+    border-radius: 10px;
+  }
+}
+
+/* .list-item {
+  lebel {
+    input[type="checkbox"] {
+      display: none;
+    }
+    .check {
+      width: 20px;
+      height: 20px;
+      background: url(../images/checkbox.svg);
+    }
+  }
+
+  .check[type="checkbox"] + span {
+    display: inline-block;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    line-height: 20px;
+    background: url(../images/checkbox.svg);
+    user-select: none;
+  }
+  input[type="checkbox"]:checked {
+    background: url(../images/check.svg) no-repeat left top;
+  }
+} */
+
+.filter-btn {
+  border: 0;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 15px 0;
+  width: 166px;
+  /* display: flex;
+  justify-content: center; */
+}
+.filter-btn:hover {
+  border-bottom: $secondary 2px solid;
+}
+
+.list-item {
+  label {
+    width: 100%;
+    input[type="checkbox"] {
+      display: none;
+    }
+    /* .check {
+      display: inline-block;
+      width: 25px;
+      height: 20px;
+      background: url(../images/checkbox.svg) no-repeat;
+    } */
+  }
+  .task-content {
+    width: 100%;
+  }
+  /* input[type="checkbox"]:checked ~ .check {
+    background: url(../images/check.svg) no-repeat;
+  } */
+}
+
+.delete {
+  background-color: #fff;
+  border: 0;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.active {
+  border-bottom: $secondary 2px solid;
+}

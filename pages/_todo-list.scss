@@ -1,0 +1,58 @@
+.todo-list {
+  height: 100vh;
+  background-image: url("../images/bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: #fff !important;
+  background-repeat: no-repeat;
+}
+
+main {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.empty {
+  p {
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 60px 0 40px 0;
+  }
+  img {
+    width: 240px;
+  }
+}
+
+.wrap-task {
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 0px #00000026;
+  border-radius: 10px;
+}
+
+.list-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.nickName {
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.logOut {
+  font-family: Noto Sans TC;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $secondary;
+}

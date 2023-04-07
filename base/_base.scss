@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none !important;
+}
+
+button {
+  padding: 0;
+}
+/* p {
+  margin: 0 !important;
+} */
+
+$primary: #ffd370;
+$secondary: #333333;
+$warning: #d87355;
+.title {
+  font-family: Baloo Thambi 2;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.black {
+  color: $secondary;
+}

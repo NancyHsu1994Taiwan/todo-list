@@ -1,0 +1,71 @@
+帳號01
+email: jjuice258tw@gmail.com
+password: 19880203kh
+nickname: nancy
+登入token
+Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODIyIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzQyMDY1LCJleHAiOjE2ODIwMzgwNjUsImp0aSI6IjM2ODgzZTZkLThjNGUtNDMzMi1iY2RmLTQ5ODVmOGU2ZGIyZSJ9.-ivHaSy58FxnmKsQU0qdlRfSWCt8BKsdDFahayZEQJ4 
+
+ Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODIyIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzQ0NjQ2LCJleHAiOjE2ODIwNDA2NDYsImp0aSI6ImM4YzhlZWRlLTI1ZTQtNDNiZC1hNTdlLWVmMmZiZTlmMTY2NSJ9.QmDeaQvoepE4DEXagKpen3V_j5D0p35bsD7IhOhq4l8 
+
+
+
+
+
+
+帳號02
+email: nancy.yun.lin.hsu@gmail.com
+password: 19880203kh01
+nickname: nancyHsu
+註冊token
+Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzQxNjczLCJleHAiOjE2ODIwMzc2NzMsImp0aSI6IjA1ZTUwOTljLTNhMWYtNGE0ZS04NmU3LThiOWE3ZDAwNTY3OCJ9.qLfrM5_3i-5i8aZKOisHKsVIe9ulUq_Tomx6Ip8hkaY 
+
+登入token
+ Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODIyIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzQxNDU2LCJleHAiOjE2ODIwMzc0NTYsImp0aSI6IjE4ZDg0YjlkLTU3NzgtNDdjNS04NjI5LTQ0NDcxOThjNzMzNCJ9.wIjawNSLNnscPpv47OyzomJj4QCrXut_fvFQ4laZDnw 
+
+ Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzQyNDExLCJleHAiOjE2ODIwMzg0MTEsImp0aSI6IjU3MmNjZGRkLWU2YzMtNGNlZC04ZTgzLTlmZGYxMmE2OWUyNiJ9.4C1cgd_8K8YDnZC9srgfuEz_xscc9unA1o1Q5b6kCx8 
+
+ Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzQ1MDAzLCJleHAiOjE2ODIwNDEwMDMsImp0aSI6ImRiNTE3NWRjLWU1MDItNDY1OC1iNzVhLWU5MjBjMzZjOWU3ZCJ9.nhvUKB2SkbUK56u-g7TEvaH6ibhpIipTy-rmsWIsuxc 
+
+ Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzUwNzc3LCJleHAiOjE2ODIwNDY3NzcsImp0aSI6IjY5ZDJhN2QwLTY3NTgtNGRkYS1iYWE4LTQ5ZjYxYmNiOGQwNCJ9.AYmnox1PuoLdsUbIKXPbWjApk8A8kqI2YcLlEJef4dg 
+
+ Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzUxNTk0LCJleHAiOjE2ODIwNDc1OTQsImp0aSI6IjNiNTZhM2Y3LWU3ZjEtNGJkMy1iOTkyLWRiMzE3NDVhMTMwZSJ9.DgU-QnP38-Wb8HVrHfZxnBU1qSMEB0pcLgyplS9ZxJk 
+
+
+ .input-normal::after {
+  content: "此欄位不可為空";
+  color: $warning;
+  display: block;
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+
+帳號03
+"email": "string@gmail.com",
+"nickname": "string",
+"password": "string123"
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzODI3Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjgwNzU2MTI1LCJleHAiOjE2ODIwNTIxMjUsImp0aSI6ImY0YzgwYjk5LWQwZmEtNGFhYy1iZGRlLWFiOGQ5M2Q0YjI5YSJ9.8sHsS6ZOxy1LZooe3NcHLVwZL9OKEza7NKb93cXZ25U 
+
+帳號04
+"email": "123@gmail.com",
+"password": "123456"
+
+帳號05
+"email": "135@gmail.com",
+"password": "135798"
+
+帳號06
+"email": "147@gmail.com",
+"password": "147258"
+
+帳號07
+"email": "147@gmail.com",
+"password": "147258"
+
+帳號08
+"email": "369@gmail.com",
+"password": "369147"
