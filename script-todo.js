@@ -10,6 +10,7 @@ const logOutBtn = document.querySelector(".logOut"); // 登出按鈕
 const btnAll = document.querySelector(".btn-all");
 const btnYet = document.querySelector(".btn-yet");
 const btnDone = document.querySelector(".btn-done");
+const todoNum = document.querySelector(".todoNum");
 
 // API
 const baseUrl = "https://todoo.5xcamp.us";
@@ -275,6 +276,7 @@ function switchStatus(e) {
 function renderData() {
   if (position === 1) {
     let str = "";
+    let yetNum = 0;
     data.map((item, index) => {
       str += `<li class="list-item d-flex align-items-center" data-num="${index}" data-id="${
         item.id
@@ -298,10 +300,15 @@ function renderData() {
           <img src="./images/delete.svg" alt="" srcset="" class="js-delete"/>
         </button>
       </li>`;
+      if (item.completed_at === null) {
+        yetNum += 1;
+      }
     });
     list.innerHTML = str;
+    todoNum.textContent = `${yetNum}個待完成項目`;
   } else if (position === 2) {
     let str = "";
+    let yetNum = 0;
     data.filter((item, index) => {
       if (!item.completed_at) {
         str += `<li class="list-item d-flex align-items-center" data-num="${index}" data-id="${
@@ -326,11 +333,16 @@ function renderData() {
           <img src="./images/delete.svg" alt="" srcset="" class="js-delete"/>
         </button>
       </li>`;
+        if (item.completed_at === null) {
+          yetNum += 1;
+        }
       }
     });
     list.innerHTML = str;
+    todoNum.textContent = `${yetNum}個待完成項目`;
   } else if (position === 3) {
     let str = "";
+    let yetNum = 0;
     data.filter((item, index) => {
       if (item.completed_at) {
         str += `<li class="list-item d-flex align-items-center" data-num="${index}" data-id="${
@@ -355,9 +367,13 @@ function renderData() {
           <img src="./images/delete.svg" alt="" srcset="" class="js-delete"/>
         </button>
       </li>`;
+        if (item.completed_at === null) {
+          uncompletedNum += 1;
+        }
       }
     });
     list.innerHTML = str;
+    todoNum.textContent = `${yetNum}個待完成項目`;
   }
   console.log(data.length);
   if (data.length === 0) {
