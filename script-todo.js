@@ -47,7 +47,7 @@ function disappear() {
 }
 // 顯示待辦區塊
 function renderBox() {
-  wrapBox.setAttribute("class", "wrap-task");
+  wrapBox.setAttribute("class", "js-wrap-task wrap-task");
   list.setAttribute("class", "list px-4 d-block");
 }
 
@@ -359,11 +359,46 @@ function renderData() {
     });
     list.innerHTML = str;
   }
-
+  console.log(data.length);
   if (data.length === 0) {
+    wrapBox.setAttribute("class", "js-wrap-task d-none");
     list.setAttribute("class", "list px-4 d-none");
+    filter.setAttribute("class", "filter d-none");
+    empty.setAttribute(
+      "class",
+      "empty d-flex flex-column justify-content-center align-items-center"
+    );
   } else {
+    wrapBox.setAttribute("class", "js-wrap-task wrap-task");
     list.setAttribute("class", "list px-4 d-block");
+    filter.setAttribute("class", "filter d-flex");
+    empty.setAttribute("class", "empty d-none");
+    // let str = "";
+    // data.map((item, index) => {
+    //   str += `<li class="list-item d-flex align-items-center" data-num="${index}" data-id="${
+    //     item.id
+    //   }" data-completed="${item.completed_at}">
+    //     <label class="d-flex">
+    //       <input type="checkbox"/>
+    //       <div class="js-check check">
+    //         <img id="checkTodo" data-id="${item.id}" src="${
+    //     item.completed_at !== null
+    //       ? "./images/check.svg"
+    //       : "./images/checkbox.svg"
+    //   }">
+    //       </div>
+    //       <p class="${
+    //         item.completed_at !== null
+    //           ? "task-content mx-3 line-through"
+    //           : "task-content mx-3"
+    //       }">${item.content}</p>
+    //     </label>
+    //     <button class="js-delete delete">
+    //       <img src="./images/delete.svg" alt="" srcset="" class="js-delete"/>
+    //     </button>
+    //   </li>`;
+    // });
+    // list.innerHTML = str;
   }
 }
 
