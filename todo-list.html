@@ -14,54 +14,64 @@
     <link rel="stylesheet" href="all.css" />
   </head>
   <body class="todo-list">
-    <nav class="d-flex justify-content-between align-items-center p-4">
-      <a class="logo d-flex align-items-center" href="./index.html">
-        <img src="./images/logo.svg" alt="" srcset="" />
-        <p class="black">ONLINE TODO LIST</p>
-      </a>
-      <div class="d-flex align-items-center">
-        <p class="mx-4 nickName"></p>
-        <a href="#" class="logOut">登出</a>
-      </div>
-    </nav>
-    <main>
-      <!-- 輸入欄 -->
-      <div class="add-task-box d-flex mb-3">
-        <input
-          type="text"
-          name=""
-          id="input-value"
-          class="input-value"
-          placeholder="新增待辦事項"
-        />
-        <button class="add-task">
-          <div class="add-box">
-            <img src="./images/add-task.svg" alt="" srcset="" />
-          </div>
-        </button>
-      </div>
-      <!-- 預備畫面 -->
-      <div
-        class="empty d-flex flex-column justify-content-center align-items-center"
-      >
-        <p>目前尚無待辦事項</p>
-        <img src="./images/empty 1.svg" alt="" />
-      </div>
-      <!-- 待辦事項 -->
-      <div class="js-wrap-task">
-        <ul class="filter d-none">
-          <li>
-            <input type="button" value="全部" class="filter-btn btn-all" />
-          </li>
-          <li>
-            <input type="button" value="待完成" class="filter-btn btn-yet" />
-          </li>
-          <li>
-            <input type="button" value="已完成" class="filter-btn btn-done" />
-          </li>
-        </ul>
-        <ul class="list px-4">
-          <!-- <li class="list-item d-flex align-items-center" data-num="0">
+    <div id="app">
+      <nav class="d-flex justify-content-between align-items-center p-4">
+        <a class="logo d-flex align-items-center" href="./login.html">
+          <img src="./images/logo.svg" alt="" srcset="" />
+          <p class="black">ONLINE TODO LIST</p>
+        </a>
+        <div class="d-flex align-items-center">
+          <p class="mx-4 nickName">{{nickName}}的待辦</p>
+          <a href="#" class="logOut" v-on:click="logOut()">登出</a>
+        </div>
+      </nav>
+
+      <main>
+        <!-- 輸入欄 -->
+        <div class="add-task-box d-flex mb-3">
+          <input
+            type="text"
+            name=""
+            id="input-value"
+            class="input-value"
+            placeholder="新增待辦事項"
+            v-model="addContent"
+          />
+          <button class="add-task" v-on:click="addTask()">
+            <div class="add-box">
+              <img src="./images/add-task.svg" alt="" srcset="" />
+            </div>
+          </button>
+        </div>
+        <!-- 預備畫面 -->
+        <div
+          id="empty"
+          class="empty d-flex flex-column justify-content-center align-items-center"
+        >
+          <p>目前尚無待辦事項</p>
+          <img src="./images/empty 1.svg" alt="" />
+        </div>
+        <!-- 待辦事項 -->
+        <div
+          id="list"
+          class="js-wrap-task bg-white d-none"
+          v-on:click="switchStatus"
+        >
+          <!--           v-on:click="switchStatus"
+          v-on:click="deleteTask" -->
+          <ul class="filter d-flex">
+            <li v-on:click="filterAll">
+              <input type="button" value="全部" class="filter-btn btn-all" />
+            </li>
+            <li v-on:click="filterYet">
+              <input type="button" value="待完成" class="filter-btn btn-yet" />
+            </li>
+            <li v-on:click="filterDone">
+              <input type="button" value="已完成" class="filter-btn btn-done" />
+            </li>
+          </ul>
+          <ul class="list px-4" v-on:click="deleteTask">
+            <!-- <li class="list-item d-flex align-items-center" data-num="0">
             <label class="d-flex">
               <input type="checkbox" name="" id="" class="check" />
               <p class="task-content mx-3">task 01</p>
@@ -70,17 +80,28 @@
               <img src="./images/delete.svg" alt="" srcset="" />
             </button>
           </li> -->
-        </ul>
-        <p class="todoNum">0個待完成項目</p>
-      </div>
-    </main>
-
+          </ul>
+          <div
+            class="d-flex justify-content-between align-items-center px-4 py-4"
+          >
+            <p class="todoNum m-0">{{uncompletedNum}}個待完成項目</p>
+            <input
+              type="button"
+              id="deleteAllBtn"
+              class="deleteAllBtn border border-0 bg-white text-secondary"
+              value="清除已完成項目"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script src="./script-todo.js"></script>
+    <!-- <script src="./script-todo.js"></script> -->
+    <script type="module" src="./Vue-todo.js"></script>
   </body>
 </html>
